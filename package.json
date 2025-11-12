@@ -1,0 +1,41 @@
+{
+  "name": "web3-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A modern Web3 boilerplate with Next.js, Wagmi, and RainbowKit",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.0.0",
+    "@react-native-async-storage/async-storage": "^1.23.1",
+    "@tanstack/react-query": "^5.83.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "ethers": "^6.11.0",
+    "lucide-react": "^0.525.0",
+    "next": "15.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.1",
+    "viem": "^2.7.0",
+    "wagmi": "^2.5.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.0",
+    "pino-pretty": "^10.0.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+
