@@ -24,15 +24,20 @@ const nextConfig: NextConfig = {
 
   /**
    * Security headers for web3 apps
+   * Allow embedding in iframes from minidev.fun and Vercel preview URLs
    */
   async headers() {
+    // Allow same-origin, your production domain, Vercel preview URLs, and localhost (HTTP/HTTPS, any port)
+    const frameAncestors =
+      "frame-ancestors 'self' https://minidev.fun https://*.minidev.fun https://*.vercel.app https://farcaster.xyz https://*.farcaster.xyz http://localhost:* http://127.0.0.1:* https://127.0.0.1:*";
+
     return [
       {
         source: "/:path*",
         headers: [
           {
-            key: "X-Frame-Options",
-            value: "SAMEORIGIN",
+            key: "Content-Security-Policy",
+            value: frameAncestors,
           },
           {
             key: "X-Content-Type-Options",
