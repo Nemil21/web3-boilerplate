@@ -2,17 +2,19 @@ import type { Metadata } from "next";
 import { Funnel_Display, Funnel_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/app/providers";
-import { Navbar, Banner, Footer } from "@/components/layout";
 
-const headingFont = Funnel_Display({
+// Modern fonts matching minidev.fun design
+const funnelDisplay = Funnel_Display({
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
-  variable: "--font-heading",
+  variable: "--font-funnel-display",
   display: "swap",
 });
 
 const funnelSans = Funnel_Sans({
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-funnel-sans",
   display: "swap",
 });
 
@@ -35,15 +37,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelSans.variable} ${headingFont.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${funnelDisplay.variable} ${funnelSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
-        <Providers>
-          <Banner />
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/Button';
 
 /**
  * Customized ConnectWallet component using RainbowKit
@@ -56,7 +56,7 @@ export function ConnectWallet() {
                   return (
                     <Button
                       onClick={openChainModal}
-                      variant="destructive"
+                      variant="danger"
                       size="lg"
                     >
                       Wrong Network
