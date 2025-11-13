@@ -1,6 +1,6 @@
 'use client';
 
-import { Tabs, TabsList, TabsTab, TabsPanel } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/Tabs";
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardPanel, CardDescription } from '@/components/ui/card';
 import { useUser } from '@/hooks';
