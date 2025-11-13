@@ -86,11 +86,11 @@ export default function Home() {
               </CardHeader>
               <CardPanel>
                 <ul className="space-y-2 text-muted-foreground mb-6">
-                  <li>✨ Multiple wallet connectors (MetaMask, WalletConnect, Coinbase)</li>
-                  <li>🔗 Multi-chain support (Mainnet, Base, Optimism, Arbitrum, Polygon)</li>
-                  <li>🎨 Beautiful, modern UI components</li>
-                  <li>⚡ Optimized for Web3 applications</li>
-                  <li>🛠️ TypeScript & full type safety</li>
+                  <li>Multiple wallet connectors (MetaMask, WalletConnect, Coinbase)</li>
+                  <li>Multi-chain support (Mainnet, Base, Optimism, Arbitrum, Polygon)</li>
+                  <li>Beautiful, modern UI components</li>
+                  <li>Optimized for Web3 applications</li>
+                  <li>TypeScript & full type safety</li>
                 </ul>
                 <div className="flex gap-3">
                   <Button variant="default">Get Started</Button>
