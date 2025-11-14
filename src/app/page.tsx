@@ -1,12 +1,12 @@
 'use client';
 
 import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/Tabs";
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardPanel, CardDescription } from '@/components/ui/card';
+import { Button } from '@/components/ui/Button';
+import { Card, CardHeader, CardTitle, CardPanel, CardDescription } from '@/components/ui/Card';
 import { useUser } from '@/hooks';
 import { truncateAddress, formatBalance } from '@/lib/utils';
 import { Wallet, Network, Coins } from 'lucide-react';
-
+import { ConnectWallet } from '@/components/wallet/ConnectWallet';
 export default function Home() {
   const { address, isConnected, isConnecting, balance, ensName, chainId } = useUser();
 

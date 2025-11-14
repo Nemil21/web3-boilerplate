@@ -2,14 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /**
-   * Disable ESLint during production builds to prevent deployment failures
-   * ESLint errors that don't affect functionality shouldn't block deployment
-   */
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-
-  /**
    * Enable React strict mode for better development experience
    */
   reactStrictMode: true,
@@ -24,20 +16,17 @@ const nextConfig: NextConfig = {
 
   /**
    * Security headers for web3 apps
-   * Allow embedding in iframes from minidev.fun and Vercel preview URLs
+   * Allow embedding in iframes (required for preview)
    */
   async headers() {
-    // Allow same-origin, your production domain, Vercel preview URLs, and localhost (HTTP/HTTPS, any port)
-    const frameAncestors =
-      "frame-ancestors 'self' https://minidev.fun https://*.minidev.fun https://*.vercel.app https://farcaster.xyz https://*.farcaster.xyz http://localhost:* http://127.0.0.1:* https://127.0.0.1:*";
-
     return [
       {
         source: "/:path*",
         headers: [
+          // Allow embedding from any origin
           {
             key: "Content-Security-Policy",
-            value: frameAncestors,
+            value: "frame-ancestors *",
           },
           {
             key: "X-Content-Type-Options",

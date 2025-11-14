@@ -5,7 +5,7 @@
   "description": "A modern Web3 boilerplate with Next.js, Wagmi, and RainbowKit",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "SKIP_LINT=true next build",
     "start": "next start",
     "lint": "next lint"
   },
