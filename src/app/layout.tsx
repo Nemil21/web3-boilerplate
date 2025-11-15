@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   title: "Web3 App - Modern Web3 Boilerplate",
   description: "A modern Web3 application built with Next.js, Wagmi, and RainbowKit",
   keywords: ["web3", "ethereum", "dapp", "blockchain", "crypto"],
+  openGraph: {
+    images: ["/og.png"],
+  },
+  twitter: {
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
